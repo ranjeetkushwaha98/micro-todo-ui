@@ -1,12 +1,13 @@
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: demo-service
-# spec:
-#   selector:
-#     app: web
-#   ports:
-#   - protocol: TCP
-#     port: 80
-#     targetPort: 8080
-#   type: LoadBalancer
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+  namespace: ranjeet
+spec:
+  selector:
+    app: web
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
