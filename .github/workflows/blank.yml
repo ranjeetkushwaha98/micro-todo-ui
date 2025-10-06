@@ -8,7 +8,7 @@ permissions:
   id-token: write
 jobs:
   build-job:
-    runs-on: [self-hosted,]
+    runs-on: ubuntu-latest
     env:
       IMAGE_NAME: todo-ui
       IMAGE_VERSION: v1
