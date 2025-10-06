@@ -1,0 +1,43 @@
+name: todoui workflow
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build-job:
+    runs-on: [self-hosted]
+    env:
+      IMAGE_NAME: todo-ui
+      IMAGE_VERSION: v1
+      ACR_NAME: sohitacr
+      ACR_LOGIN_SERVER: sohitacr.azurecr.io
+      
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+    
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        with:
+         client-id: 8cb427fc-839a-4eba-93ab-5a6355f5aca6
+         tenant-id: c3a57982-95da-4753-adb7-e1e9452746a2
+         subscription-id: 418b0f60-e8d3-4b5e-af5d-2f7154274590
+
+      - name: acr login
+        run: |
+          az acr login --name $ACR_NAME
+
+      - name: build image
+        run: |
+          docker build -t $ACR_LOGIN_SERVER/$IMAGE_NAME:IMAGE_VERSION
+
+      - name: build image
+        run: |
+          docker push $ACR_LOGIN_SERVER/$IMAGE_NAME:IMAGE_VERSION
+  
