@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
   - name: test
-    image: sohitacr.azurecr.io/todo-ui:IMAGE_VERSION
+    image: nginx
     ports:
     - containerPort: 80
