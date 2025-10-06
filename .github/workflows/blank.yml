@@ -1,17 +1,14 @@
-name: todoui workflow
-
+name: "todoui workflow"
 on:
   push:
     branches:
       - main
-
 permissions:
   contents: read
   id-token: write
-
 jobs:
   build-job:
-    runs-on: [self-hosted]
+    runs-on: [self-hosted,]
     env:
       IMAGE_NAME: todo-ui
       IMAGE_VERSION: v1
