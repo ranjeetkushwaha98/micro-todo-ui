@@ -1,17 +1,14 @@
-name: todoui workflow
-
+name: "todoui workflow"
 on:
   push:
     branches:
       - main
-
 permissions:
   contents: read
   id-token: write
-
 jobs:
   build-job:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     env:
       IMAGE_NAME: todo-ui
       IMAGE_VERSION: v1
@@ -35,7 +32,7 @@ jobs:
 
       - name: build image
         run: |
-          docker build -t $ACR_LOGIN_SERVER/$IMAGE_NAME:IMAGE_VERSION
+          docker build -t $ACR_LOGIN_SERVER/$IMAGE_NAME:IMAGE_VERSION .
 
       - name: build image
         run: |
