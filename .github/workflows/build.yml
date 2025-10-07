@@ -12,8 +12,8 @@ jobs:
     env:
       IMAGE_NAME: todo-ui
       IMAGE_VERSION: v1
-      ACR_NAME: sohitacr
-      ACR_LOGIN_SERVER: sohitacr.azurecr.io
+      ACR_NAME: aksdemoclusterregistry
+      ACR_LOGIN_SERVER: aksdemoclusterregistry.azurecr.io
       
     steps:
       - name: Checkout
