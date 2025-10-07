@@ -10,7 +10,7 @@ jobs:
   build-job:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: todo-ui
+      IMAGE_NAME: todo-ui-r
       IMAGE_VERSION: v1
       ACR_NAME: aksdemoclusterregistry
       ACR_LOGIN_SERVER: aksdemoclusterregistry.azurecr.io
