@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
   - name: test
-    image: nginx
+    image: aksdemoclusterregistry.azurecr.io/todo-ui-r:IMAGE_VERSION
     ports:
     - containerPort: 80
