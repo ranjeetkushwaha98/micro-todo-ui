@@ -15,8 +15,8 @@ jobs:
     env:
       IMAGE_NAME: todo-ui-r
       IMAGE_VERSION: v1
-      ACR_NAME: aksdemoclusterregistry
-      ACR_LOGIN_SERVER: aksdemoclusterregistry.azurecr.io
+      ACR_NAME: testacr3211
+      ACR_LOGIN_SERVER: testacr3211.azurecr.io
       
     steps:
       - name: Checkout
@@ -25,9 +25,9 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
-         client-id: 8cb427fc-839a-4eba-93ab-5a6355f5aca6
-         tenant-id: c3a57982-95da-4753-adb7-e1e9452746a2
-         subscription-id: 418b0f60-e8d3-4b5e-af5d-2f7154274590
+         client-id: 7fad8abf-358a-4d48-9409-a3240b110650
+         tenant-id: 8ab5781a-7bf2-4b23-8a88-9ac543f6f20f
+         subscription-id: 135c8cc3-c5aa-4358-9e11-f2056457e4a5
 
       - name: acr login
         run: |
