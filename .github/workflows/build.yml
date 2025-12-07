@@ -27,7 +27,7 @@ jobs:
         with:
          client-id: 454c72cf-c0f6-4974-ba31-6629a9cc8b82
          tenant-id: 8ab5781a-7bf2-4b23-8a88-9ac543f6f20f
-         subscription-id: 8ab5781a-7bf2-4b23-8a88-9ac543f6f20f
+         subscription-id: 135c8cc3-c5aa-4358-9e11-f2056457e4a5
 
       - name: acr login
         run: |
